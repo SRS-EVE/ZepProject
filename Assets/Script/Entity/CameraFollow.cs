@@ -1,10 +1,11 @@
+
 using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
     public Transform target;
     public float smoothSpeed = 5f;
-    public Vector3 offset = new Vector3(0, 0, 0); // z´Â ÀÏ´Ü ¹«½ÃÇØµµ µÊ
+    public Vector3 offset = new Vector3(0, 0, 0); // zï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ ï¿½ï¿½
 
     void LateUpdate()
     {
@@ -12,10 +13,11 @@ public class FollowCamera : MonoBehaviour
 
         Vector3 desiredPosition = target.position + offset;
 
-        // ¹Ýµå½Ã ZÃàÀ» °íÁ¤ (2D Ä«¸Þ¶ó´Â -10 Á¤µµ)
+        // ï¿½Ýµï¿½ï¿½ Zï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (2D Ä«ï¿½Þ¶ï¿½ï¿½ -10 ï¿½ï¿½ï¿½ï¿½)
         desiredPosition.z = -10f;
 
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
+
     }
 }
