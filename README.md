@@ -26,9 +26,11 @@ ZEP 스타일의 2D 캐릭터 이동 및 점프 연출을 중심으로 제작된
 
 ## 프로젝트 구조
 MainScene/
+
 ├── Player (빈 오브젝트)
 
-│ └── MainSprite (스프라이트 및 애니메이션)
+│ 
+└── MainSprite (스프라이트 및 애니메이션)
 
 ├── Grid (타일맵: Floor, Collision)
 
